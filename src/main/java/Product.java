@@ -11,9 +11,6 @@ public class Product {
         prices = new HashMap<>();
     }
 
-    public String getName(){
-        return name;
-    }
 
     public void addPrice(Double price){
         if(prices.containsKey(price))
@@ -22,13 +19,6 @@ public class Product {
             prices.put(price,1);
     }
 
-    public Map<Double,Integer> getPrices(){
-        return prices;
-    }
-
-//    public Integer getPriceSeen(Double price){
-//        return prices.get(price);
-//    }
 
     public Integer getTotalSeen(){
         int sum = 0;
@@ -45,6 +35,8 @@ public class Product {
     public String capName(String name){
         return Character.toUpperCase(name.charAt(0))+name.substring(1);
     }
+
+
     @Override
     public String toString() {
         int counter = 0;

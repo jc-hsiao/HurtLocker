@@ -36,10 +36,8 @@ public class Main {
             Matcher mat = pat.matcher(str);
 
             while(mat.find()) {
-
                 String name = "";
                 double price = 0.0;
-
                 try {
                     name = zeroToO(mat.group(2).toLowerCase());
                     price = Double.parseDouble(mat.group(4));
@@ -49,7 +47,6 @@ public class Main {
                     error++;
                     continue;
                 }
-
                 //if the product does not exist in the map, add a new product
                 if(!productMap.containsKey(name))
                     productMap.put(name, new Product(name));
